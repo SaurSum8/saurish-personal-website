@@ -7,9 +7,12 @@ async function getBlog({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   try {
     // This fetches the blog from an api endpoint that would GET the blog
-    const res = await fetch(`/api/Blogs/${slug}`, {
-      cache: "no-store",
-    });
+    const res = await fetch(
+      `saurish-personal-website.vercel.app/api/Blogs/${slug}`,
+      {
+        cache: "no-store",
+      }
+    );
     // This checks that the GET request was successful
     if (!res.ok) {
       throw new Error("Failed to fetch blog");
