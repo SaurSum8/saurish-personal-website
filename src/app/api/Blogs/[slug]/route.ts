@@ -2,9 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import connectDB from "@/database/db";
 import blogSchema from "@/database/blogSchema";
 
-type Params = { slug: string };
-
-export async function GET(req: NextRequest, { params }: { params: Params }) {
+export async function GET(
+  req: NextRequest,
+  { params }: { params: blogSchema }
+) {
   await connectDB();
   const { slug } = params;
 
