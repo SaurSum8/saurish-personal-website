@@ -8,7 +8,7 @@ async function getBlog({ params }: { params: Promise<{ slug: string }> }) {
   try {
     // This fetches the blog from an api endpoint that would GET the blog
     const res = await fetch(
-      `saurish-personal-website.vercel.app/api/Blogs/${slug}`,
+      `https://saurish-personal-website.vercel.app/api/Blogs/${slug}`,
       {
         cache: "no-store",
       }
