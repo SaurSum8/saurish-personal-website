@@ -7,7 +7,7 @@ async function getBlog({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   try {
     // This fetches the blog from an api endpoint that would GET the blog
-    const res = await fetch(`http://localhost:3000/api/Blogs/${slug}`, {
+    const res = await fetch(`/api/Blogs/${slug}`, {
       cache: "no-store",
     });
     // This checks that the GET request was successful
