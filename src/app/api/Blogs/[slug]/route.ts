@@ -4,7 +4,7 @@ import blogSchema from "@/database/blogSchema";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: Promise<{ slug: string }> }
+  { params }: { params: { slug: string } }
 ) {
   await connectDB(); // function from db.ts before
   const { slug } = await params; // another destructure
