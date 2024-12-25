@@ -8,10 +8,10 @@ export default function Navbar() {
     // with your navbar code from your earlier milestones
     // NOTE: we use "class" in HTML but React is quirky so we have to
     // change all the "class" to "className"
-    
+
     <header className={style.navbar}>
       <h1 className={style.logo}>
-        <Link href="/">Saurish's Personal Website</Link>
+        <Link href="/">Saurish&apos;s Personal Website</Link>
       </h1>
       <nav>
         {/* We'll use Link from now on instead of <a></a>
@@ -37,6 +37,5 @@ export default function Navbar() {
         {/* More Links ... */}
       </nav>
     </header>
-    
   );
 }

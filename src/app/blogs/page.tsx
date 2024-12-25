@@ -2,6 +2,7 @@
 import BlogPreview from "@/components/blogPreview";
 import connectDB from "@/database/db";
 import Blog from "@/database/blogSchema";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 async function getBlogs() {
   await connectDB(); // function from db.ts before
@@ -12,6 +13,7 @@ async function getBlogs() {
     // send a response as the blogs as the message
     return blogs;
   } catch (err) {
+    console.log("Error Getting Blog -", err);
     return null;
   }
 }

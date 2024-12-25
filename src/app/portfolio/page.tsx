@@ -2,6 +2,7 @@ import PortView from "@/components/portfolioList";
 import connectDB from "@/database/db";
 import PortF from "@/database/portSchema";
 import { Key } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 async function getPorts() {
   await connectDB(); // function from db.ts before
