@@ -7,7 +7,7 @@ type Props = {
   params: { slug: string };
 };
 
-async function getBlog(slug: string) {
+async function getBlog({ params: { slug } }: Props) {
   try {
     // This fetches the blog from an api endpoint that would GET the blog
     const res = await fetch(`http://localhost:3000/api/Blogs/${slug}`, {
@@ -26,7 +26,7 @@ async function getBlog(slug: string) {
 }
 
 export default async function Blog({ params: { slug } }: Props) {
-  const cmnt: BLOGType = await getBlog(slug);
+  const cmnt: BLOGType = await getBlog({ params: { slug } });
   const comList = cmnt["comments"];
   comList.sort((a, b) => a.time.localeCompare(b.time));
 
