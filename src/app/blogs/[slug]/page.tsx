@@ -3,10 +3,6 @@ import Comments from "@/components/comment";
 import BLOGType from "@/database/blogSchema";
 import CommentForm from "@/components/CommentForm";
 
-type Props = {
-  params: { slug: string };
-};
-
 async function getBlog({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   try {
